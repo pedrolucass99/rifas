@@ -1,0 +1,41 @@
+.table {
+    width: 200%;
+    margin-bottom: 1rem;
+    color: #212529;
+}
+div#box{
+	margin-top: 50px;
+	display: block; 
+	background-color: transparent; 
+	border:1px white; 
+	height: 250px; 
+	width: 550px;
+}
+td, th {
+	padding: .7em;
+	margin: 50px;
+	/*border: 1px solid #ccc;*/
+	text-align: center;
+  }
+  
+  th{
+	/*background-color: #EEE;*/
+  }
+  td{
+	font-weight:bold;
+	/*background-color: #EEE;*/
+  }
+  
+  table{
+	width: 200%;
+	margin-bottom : .5em;
+	table-layout: fixed;
+	text-align: center;
+	  margin-right: 250px;
+  margin-left: 250px;
+  }
+  .table1{
+  flex-wrap: wrap;
+  margin-right: -250px;
+  margin-left: 250px;
+}
