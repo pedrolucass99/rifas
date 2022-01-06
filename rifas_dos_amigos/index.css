@@ -46,6 +46,10 @@
     background-color: rgba(229, 255, 0, 0.993);
   }
 
+  .CONFIRMADO{
+    background-color: rgba(255, 0, 0, 1);
+  }
+
   .link_bloqueado{
     pointer-events: none;
   }
