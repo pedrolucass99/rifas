@@ -34,23 +34,40 @@ window.onload = function(){
 </head>
 <body>
 <?php
+include 'templates/templateMenu.php';
     $numeroRifa = $_GET['rifa'];
 ?>
-<form action="add.php" method="POST">
-    <label>Seu nome</label>
-   <input type="text" name="nome"    placeholder="Seu nome">
-   <br>
-   <label>Numero da Rifa</label>
-   <input type="text" name="numero" value="<?=$numeroRifa?>"  placeholder="Numero da rifa" readonly> 
-   <br>
-   <label>instagram</label>
-   <input type="text" name="instagram"  placeholder="instagram">
-   <br>
-   <label>telefone</label>
-   <input type="text" name="telefone" id="telefone" placeholder="Digite um número de telefone" maxlength="15" />
-   <br>
-   <input type ="submit">
-</form>
+<div class="jumbotrom text-dark">
+  <div class="row">
+    <div class="col-5">
+    <form action="add.php" method="POST">
+        <h2>Confirmar rifa</h2>
+        <div class="form-group">
+        <label>Seu nome</label>
+          <input type="text" placeholder="Seu nome" name="nome" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+          <label for="">Número da Rifa</label>
+          <input type="text" placeholder="numero" name="numero" value="<?=$numeroRifa?>" class="form-control" readonly>
+        </div>
+        <div class="form-group">
+          <label for="">instagram</label>
+          <input type="text" placeholder="instagram" name="instagram" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="">Telefone</label>
+          <input type="text" name="telefone" id="telefone" placeholder="Digite um número de telefone" maxlength="15" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <button type="submit" name="acao" value="logar" class="btn btn-primary">Entrar</button>
+        </div>
+      </form>
+    </div>
+
+ 
+  </div>
+</div>
     
 </body>
 </html>

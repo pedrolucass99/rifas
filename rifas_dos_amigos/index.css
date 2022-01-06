@@ -25,18 +25,20 @@
     box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
                 inset 2px 2px 3px rgba(0, 0, 0, .6);
 }
-.flex-container {
-    display: flex;
-  }
   .container {
     display: flex; /* or inline-flex */
+    justify-content: center;
+    flex-wrap: wrap;
   }
-  .flex-container {
+  .break{
+    flex-basis: 100%
+  }
+  /* .flex-container {
     flex-direction: row-reverse;
   }
   .flex-container {
     justify-content: space-around;
-  }
+  } */
   a{
     text-decoration: none;
     cursor: pointer;
