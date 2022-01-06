@@ -33,16 +33,15 @@ window.onload = function(){
  
 </head>
 <body>
-
-<form action="">
+<?php
+    $numeroRifa = $_GET['rifa'];
+?>
+<form action="add.php" method="POST">
     <label>Seu nome</label>
    <input type="text" name="nome"    placeholder="Seu nome">
    <br>
    <label>Numero da Rifa</label>
-   <input type="text" name="numero"  placeholder="Numero da rifa  "> 
-   <br>
-   <label>Status da rifa</label>
-   <input type="text" name="status"  placeholder="Status "> 
+   <input type="text" name="numero" value="<?=$numeroRifa?>"  placeholder="Numero da rifa" readonly> 
    <br>
    <label>instagram</label>
    <input type="text" name="instagram"  placeholder="instagram">

@@ -37,3 +37,15 @@
   .flex-container {
     justify-content: space-around;
   }
+  a{
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .AGUARDANDO{
+    background-color: rgba(229, 255, 0, 0.993);
+  }
+
+  .link_bloqueado{
+    pointer-events: none;
+  }

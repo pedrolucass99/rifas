@@ -1,16 +1,20 @@
 <?php
 
 include "conn.php";
+$status = 'AGUARDANDO';
+$nome = $_POST['nome'];
+$numero = $_POST['numero'];
+$instagram = $_POST['instagram'];
+$telefone = $_POST['telefone'];
 
-$consulta=$conn->prepare("INSERT INTO rifa(nome,numero,'status',instagram,telefone) VALUES(?,?,?,?,?)");
-$consulta->bindParam(1,$nome);
-$consulta->bindParam(2,$numero);
-$consulta->bindParam(3,$status);
-$consulta->bindParam(3,$instagram);
-$consulta->bindParam(3,$telefone);
+$consulta = $conn->prepare("UPDATE rifa SET nome='$nome', status='$status', instagram = '$instagram' 
+, telefone = '$telefone' 
+WHERE numero='$numero'");
+if($consulta->execute()){
+  echo "<script>alert('Número escolhido com sucesso!')</script>";
+  echo '<script>window.location.href = "index.php";</script>';
+}
 
-$consulta->execute();
 
-header('location:');
 
 ?>

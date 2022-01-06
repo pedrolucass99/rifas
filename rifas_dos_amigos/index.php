@@ -13,12 +13,15 @@
     $numeros->execute();
     $dados = $numeros->fetchAll(PDO::FETCH_OBJ);
     foreach($dados as $rs => $value){
-       
+      $numeroBloqueado ='';
+      if($value->status != 'DISPONIVEL'){
+        $numeroBloqueado = 'link_bloqueado';
+      }
     ?>
+    <a class="<?=$numeroBloqueado?>" href="form.php?rifa=<?=$value->numero?>">
+      <input class="favorite styled <?=$value->status?>" type="button" value="<?= $value->numero ?>">
+    </a>
 
-    <input class="favorite styled"
-       type="button"
-       value="<?= $value->numero ?>">
 
    
   <?php
