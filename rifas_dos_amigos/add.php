@@ -12,7 +12,7 @@ $consulta = $conn->prepare("UPDATE rifa SET nome='$nome', status='$status', inst
 WHERE numero='$numero'");
 if($consulta->execute()){
   echo "<script>alert('Número escolhido com sucesso!')</script>";
-  echo '<script>window.location.href = "index.php";</script>';
+  echo '<script>window.location.href = "pix.html";</script>';
 }
 
 

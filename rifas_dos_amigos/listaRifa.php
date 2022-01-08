@@ -12,8 +12,6 @@
 	<div id="user">
 
 		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymo" >
 		<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 		<?php
         include "conn.php";
@@ -22,13 +20,12 @@
 			$result = $conn->query($sql);
 		?>
 		<div id="table">
-			<div class="row">
-			
-			</div>
 
 
 			<div id="table">
-
+		
+          
+    
 				<div id="table">
 
 
@@ -40,6 +37,7 @@
 								<th>Rifa</th>
 								<th>satatus</th>
 								<th>Ações</th>	                
+								<th><button  onclick="limparDados()" class="btn btn-success">Limpar tudo</button></th>	                
 							</tr>
 						</thead>
 						<tbody>							
@@ -81,6 +79,17 @@
           location.reload();
         }
   });
+}
+
+function limparDados(){
+	$.ajax({
+				url:'limpaDados.php', //Server script to process data
+				type: 'POST',
+				success : function (result){
+          alert(result);      
+          location.reload();
+        }
+  });	
 }
 </script>
 </body>
