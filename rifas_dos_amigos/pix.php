@@ -4,8 +4,15 @@
 <meta charset="UTF-8"/>
 <title>Document</title>
 <link href="pix.css" rel="stylesheet">
+<?php
+include 'templates/templateChamada.php';
+?>
+<link href="templates/menu.css" rel="stylesheet">
 </head>
 <body>
+  <?php 
+    include 'templates/templateMenu.php';
+  ?>
 <div class="main">
   <h1>Modo de pagamento</h1>
   <ul class="cards">

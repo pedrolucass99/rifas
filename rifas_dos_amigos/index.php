@@ -3,10 +3,13 @@
 <head>
 <meta charset="UTF-8"/>
 <title>Rifas sorteio</title>
+<?php include 'templates/templateChamada.php'?>
 <link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="templates/menu.css">
 </head>
 <body>
-<div class="container">
+  <?php include 'templates/templateMenu.php'?>
+<div class="containerf">
 
 
     <?php

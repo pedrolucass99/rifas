@@ -3,7 +3,12 @@
 <head>
 <meta charset="UTF-8"/>
 <title>Rifas sorteio</title>
+<?php
+include 'templates/templateChamada.php';
+    $numeroRifa = $_GET['rifa'];
+?>
 <link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="templates/menu.css">
 
 
 <script type="text/javascript">

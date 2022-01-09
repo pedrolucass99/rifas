@@ -2,10 +2,17 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+
+<link rel="stylesheet" href="templates/menu.css">
+  <?php
+  include 'templates/templateChamada.php';
+?>
 	<link rel="stylesheet" type="text/css" href="table.css">
-	<title>Document</title>
 </head>
 <body>
+<?php
+  include 'templates/templateMenu.php';
+?>
 <div id="position">
 <div id="lista">
 <div id="box">
